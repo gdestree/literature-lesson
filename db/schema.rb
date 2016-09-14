@@ -17,42 +17,42 @@ ActiveRecord::Schema.define(version: 20160914132758) do
   enable_extension "plpgsql"
 
   create_table "authors", force: :cascade do |t|
-    t.string   "name"
-    t.text     "biography"
+    t.string   "name",       null: false
+    t.text     "biography",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "poems", force: :cascade do |t|
-    t.integer  "author_id"
-    t.string   "title"
-    t.text     "content"
-    t.text     "metaphor"
-    t.date     "publish_date"
+    t.integer  "author_id",    null: false
+    t.string   "title",        null: false
+    t.text     "content",      null: false
+    t.text     "metaphor",     null: false
+    t.date     "publish_date", null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   create_table "short_stories", force: :cascade do |t|
-    t.integer  "author_id"
-    t.string   "title"
-    t.text     "content"
-    t.text     "short_description"
-    t.date     "publish_date"
+    t.integer  "author_id",         null: false
+    t.string   "title",             null: false
+    t.text     "content",           null: false
+    t.text     "short_description", null: false
+    t.date     "publish_date",      null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
+    t.integer  "tag_id",        null: false
+    t.integer  "taggable_id",   null: false
+    t.string   "taggable_type", null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
