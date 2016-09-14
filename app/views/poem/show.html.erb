@@ -1,2 +1,21 @@
-<h1>Poem#show</h1>
-<p>Find me in app/views/poem/show.html.erb</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+	  <h1><%= @poem.title %></h1>
+  </div>
+
+  <div class="panel-body">
+  	<h3>Description: <%= @poem.metaphor %></h3>
+
+		<h3>Content</h3>
+		<p><%= @poem.content %></p>
+	</div>
+	
+	<div class="panel-footer">	
+		<h3>Author: <%=link_to @poem.author.name, author_path(author)%></h3>
+		
+		<h3>Tags</h3>
+		<% @poem.tags.each do |tag| %>
+			<h3><span class="label label-default"><%=tag.name.upcase%></span></h3>
+		<% end %>
+	</div>
+</div>

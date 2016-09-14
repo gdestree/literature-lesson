@@ -1,2 +1,21 @@
-<h1>ShortStory#show</h1>
-<p>Find me in app/views/short_story/show.html.erb</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+	  <h1><%= @story.title %></h1>
+  </div>
+
+  <div class="panel-body">
+  	<h3>Description: <%= @story.short_description %></h3>
+
+		<h3>Content</h3>
+		<p><%= @story.content %></p>
+	</div>
+	
+	<div class="panel-footer">	
+		<h3>Author: <%=link_to @story.author.name, author_path(@story.author)%></h3>
+		
+		<h3>Tags</h3>
+		<% @story.tags.each do |tag| %>
+			<span class="label label-default"><%=tag.name.upcase%></span>
+		<% end %>
+	</div>
+</div>

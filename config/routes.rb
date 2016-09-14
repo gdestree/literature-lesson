@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'author/:id' => 'author#show', as: :author
+
   get 'short_stories' => 'short_story#index'
 
   get 'short_stories/:id' => 'short_story#show', as: :short_story
