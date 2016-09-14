@@ -12,12 +12,12 @@ In short:
 The application should be functional and without errors. Please submit your code with a short instructions describing how to start the application to me and include an overview of the different activities that you did and the amount of time that each of those took. 
 
 # Models
-  
-Poem author_id:integer title:string content:text metaphor:text publish_date:date
-ShortStory author_id:integer title:string content:text short_description:text publish_date:date
-Author name:string biography:text
+
+- Poem author_id:integer title:string content:text metaphor:text publish_date:date
+- ShortStory author_id:integer title:string content:text short_description:text publish_date:date
+- Author name:string biography:text
 
 # Using a polymorphic association for tagging this way we can link one tag to different models.
 
-Tag name:string
-Tagging tag_id:integer taggable_id:integer taggable_type:string
+- Tag name:string
+- Tagging tag_id:integer taggable_id:integer taggable_type:string
