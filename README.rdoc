@@ -1,4 +1,31 @@
 == README
+# How to run the application
+1. Clone to computer
+2. in directory Bundle install
+3. rake db:drop && rake db:create && rake db:migrate && rake db:seed
+4. rails server
+5. localhost:3000
+
+# Time overview:
+- whiteboarding models and associations: 20 minutes
+- generating models associations and validations: 25 minutes
+- create seedfile and test associations: 45 minutes
+- create the autotag method: 15 minutes
+- create views : 45 minutes
+- create proper readme file: 10 minutes
+
+
+
+# Models
+
+- Poem author_id:integer title:string content:text metaphor:text publish_date:date
+- ShortStory author_id:integer title:string content:text short_description:text publish_date:date
+- Author name:string biography:text
+
+# Using a polymorphic association for tagging this way we can link one tag to different models.
+
+- Tag name:string
+- Tagging tag_id:integer taggable_id:integer taggable_type:string
 
 Please write an application that enables storing poems and short stories (with their authors) and will automatically tag the content. Each story has a title, content, short description, publish date and an author. A poem has the same, but instead of short description it has a metaphor. Each author has a name and a biography. The content of poems, stories and biographies should be automatically tagged if it contains some of the predefined keywords (you can define 20 keywords yourself and store them however you wish). Tags can be shared between the entities. 
 
@@ -11,13 +38,5 @@ In short:
 
 The application should be functional and without errors. Please submit your code with a short instructions describing how to start the application to me and include an overview of the different activities that you did and the amount of time that each of those took. 
 
-# Models
 
-- Poem author_id:integer title:string content:text metaphor:text publish_date:date
-- ShortStory author_id:integer title:string content:text short_description:text publish_date:date
-- Author name:string biography:text
 
-# Using a polymorphic association for tagging this way we can link one tag to different models.
-
-- Tag name:string
-- Tagging tag_id:integer taggable_id:integer taggable_type:string
