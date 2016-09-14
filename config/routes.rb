@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
+  get 'author/:id' => 'author#show', as: :author
+
+  get 'short_stories' => 'short_story#index'
+
+  get 'short_stories/:id' => 'short_story#show', as: :short_story
+
+  get 'poems' => 'poem#index'
+
+  get 'poems/:id' => 'poem#show', as: :poem
+
+  get 'welcome/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

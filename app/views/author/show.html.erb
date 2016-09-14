@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+	  <h1><%= @author.name %></h1>
+  </div>
+
+  <div class="panel-body">
+
+		<h3>Biography</h3>
+		<p><%= @author.biography %></p>
+	</div>
+	
+	<div class="panel-footer">	
+		<h3>Tags</h3>
+		<% @author.tags.each do |tag| %>
+			<span class="label label-default"><%=tag.name.upcase%></span>
+		<% end %>
+	</div>
+</div>
