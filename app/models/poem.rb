@@ -3,6 +3,6 @@ class Poem < ActiveRecord::Base
 	has_many :taggings, as: :taggable
 	has_many :tags, through: :taggings
 
-  validates :title, :author_id, :content, :metaphor, :publish_date, presence: true
+  validates  :author_id, :title, :content, :metaphor, :publish_date, presence: true
 
 end
