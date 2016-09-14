@@ -1,0 +1,8 @@
+<div class="jumbotron">
+	<h2>All the Short Stories</h2>
+		<ul>
+			<%@stories.each do |story|%>
+				<li><%= link_to story.title, short_story_path(story)%></li>
+			<%end%>
+		</ul>
+</div>

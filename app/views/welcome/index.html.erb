@@ -1,0 +1,19 @@
+<div class="jumbotron">
+	<h2>Welcome to Literature Lesson</h2>
+	<p>Here you can read all about your favorite authors and their stories and poems. A lot of the content has been tagged fo clarity so that you can decide what content is best for you.</p>
+	
+	<h3>Stories</h3>
+	
+	<ul>
+		<%@stories.each do |story|%>
+			<li><%= link_to story.title, short_story_path(story)%></li>
+		<%end%>
+	</ul>
+	
+	<h3>Poems</h3>
+	<ul>
+		<%@poems.each do |poem|%>
+			<li><%= link_to poem.title, poem_path(poem)%></li>
+		<%end%>
+	</ul>
+</div>

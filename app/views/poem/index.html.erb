@@ -1,0 +1,8 @@
+<div class="jumbotron">	
+	<h2>All the Poems</h2>
+	<ul>
+		<%@poems.each do |poem|%>
+			<li><%= link_to poem.title, poem_path(poem)%></li>
+		<%end%>
+	</ul>
+</div>
