@@ -1,0 +1,44 @@
+<%= form_for :poem, url: poems_path do |f| %>
+
+<div class="col-md-10">  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1>Add a new Poem</h1>
+    </div>
+
+    <div class="panel-body">
+      <p>
+      <%= f.label :title  %><br>
+      <%= f.text_field :title, :size=>"75", placeholder: "Title", :required => true %>
+      </p>
+
+      <p>
+        <%= f.label :content %><br>
+        <%= f.text_area :content, :size=>"75x15", placeholder: "Content", :required => true %>
+      </p>
+
+      <p>
+        <%= f.label :metaphor %><br>
+        <%= f.text_field :metaphor, :size=>"75", placeholder: "Metaphor", :required => true %>
+      </p>
+
+      <p>
+        <%= f.label :publish_date %><br>
+        <%= f.text_field :publish_date, :size=>"75", placeholder: "DD/MM/YYYY", :required => true %>
+      </p>
+
+      <p>
+        <%= f.label :author_id, "Author name" %><br>
+        <%= f.text_field :author_id, :size=>"75", placeholder: "Author name", :required => true%>
+      </p>
+    </div>
+
+    <div class="panel-footer">
+    <%= f.submit "Submit New Poem", class: 'btn btn-primary' %><br>
+
+    <% end %>
+
+    <%= link_to 'Back', poems_path %>
+    </div>
+  </div>
+</div>

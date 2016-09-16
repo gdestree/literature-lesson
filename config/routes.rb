@@ -3,11 +3,19 @@ Rails.application.routes.draw do
 
   get 'short_stories' => 'short_story#index'
 
+  get 'short_stories/new' => 'short_story#new', as: :new_story
   get 'short_stories/:id' => 'short_story#show', as: :short_story
+
+
+  post 'short_stories' => 'short_story#create'
 
   get 'poems' => 'poem#index'
 
+  get 'poems/new' => 'poem#new', as: :new_poem
   get 'poems/:id' => 'poem#show', as: :poem
+
+
+  post 'poems' => 'poem#create'
 
   get 'welcome/index'
 
