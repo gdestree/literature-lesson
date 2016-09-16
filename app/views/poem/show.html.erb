@@ -11,7 +11,7 @@
 	</div>
 	
 	<div class="panel-footer">	
-		<h3>Author: <%=link_to @poem.author.name, author_path(author)%></h3>
+		<h3>Author: <%=link_to @poem.author.name, author_path(@poem.author)%></h3>
 		
 		<h3>Tags</h3>
 		<% @poem.tags.each do |tag| %>
