@@ -22,6 +22,10 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "New Short Story", new_story_path%></li>
+        <li><%= link_to "New Poem", new_poem_path%></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Short Stories", short_stories_path%></li>
         <li><%= link_to "Poems", poems_path%></li>
